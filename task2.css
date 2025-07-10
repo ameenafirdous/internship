@@ -1,0 +1,174 @@
+/* Reset & Fonts */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #fdf6fa;
+  font-family: 'Poppins', sans-serif;
+  color: #34252f;
+}
+
+/* Headers */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #532e62;
+}
+
+/* Brand Banner */
+.big-brand-banner {
+  background: linear-gradient(to right, #e8d5e6, #fde7ec);
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.big-brand-banner h1 {
+  font-size: 3rem;
+  color: #632b5f;
+}
+
+.big-brand-banner p {
+  font-size: 1.2rem;
+  color: #3e1d3c;
+}
+
+/* Nav Bar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #6d3874;
+  padding: 1rem 2rem;
+  text-align: center;
+  z-index: 999;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #ffeb99;
+}
+
+/* Hero Section */
+.hero {
+  padding: 3rem 2rem;
+  background: #fff1f7;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* CTA Button */
+.cta-button {
+  background: #aa4e82;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  transition: 0.3s;
+  margin-top: 1rem;
+}
+
+.cta-button:hover {
+  background: #832f61;
+}
+
+/* Sections */
+section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+/* Grids */
+.feature-grid, .testimonial-grid, .pricing-grid, .gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.feature-card, .testimonial-card, .pricing-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 300px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.gallery-grid img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Contact */
+.contact form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact input, .contact textarea {
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+}
+
+.contact button {
+  background: #6d3874;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 2rem;
+  background: #25d366;
+  color: white;
+  padding: 0.5rem 0.8rem;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 999;
+}
+
+/* Footer */
+footer {
+  background: #3c2f3f;
+  color: white;
+  padding: 1rem;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links { flex-direction: column; gap: 1rem; }
+  .big-brand-banner h1 { font-size: 2.2rem; }
+  .hero h2 { font-size: 1.6rem; }
+}
