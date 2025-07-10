@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🛍️ All-In-One E-Shop</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>🛒 Welcome to All-In-One E-Shop</h1>
+    <input type="text" id="searchBar" placeholder="🔍 Search for products...">
+  </header>
+
+  <section class="filters">
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+      <option value="electronics">📱 Electronics</option>
+      <option value="fashion">👗 Fashion</option>
+      <option value="home">🏠 Home</option>
+    </select>
+
+    <select id="priceFilter">
+      <option value="all">All Prices</option>
+      <option value="0-50">💰 Below $50</option>
+      <option value="50-100">💵 $50 - $100</option>
+      <option value="100">💸 Above $100</option>
+    </select>
+
+    <select id="ratingFilter">
+      <option value="all">All Ratings</option>
+      <option value="4">⭐⭐⭐⭐ & Up</option>
+      <option value="3">⭐⭐⭐ & Up</option>
+      <option value="2">⭐⭐ & Up</option>
+    </select>
+  </section>
+
+  <main id="productGrid"></main>
+
+  <!-- Popup for product details -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">×</span>
+      <img id="popupImage" src="" alt="Product Image" />
+      <h2 id="popupName"></h2>
+      <p id="popupPrice"></p>
+      <p id="popupRating"></p>
+      <p id="popupDescription"></p>
+    </div>
+  </div>
+
+  <script src="8task.js"></script>
+</body>
+</html>
