@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+:root {
+  --bg-color: #f4f4f4;
+  --text-color: #000;
+  --container-bg: #fff;
+  --btn-bg: #222;
+  --btn-text: #fff;
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --container-bg: #1e1e1e;
+  --btn-bg: #444;
+  --btn-text: #fff;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  background: var(--container-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+h2, h3 {
+  margin-top: 20px;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+  background: var(--container-bg);
+  color: var(--text-color);
+}
+
+.inline {
+  display: flex;
+  gap: 10px;
+}
+
+.inline input {
+  flex: 1;
+}
+
+.group {
+  margin-bottom: 20px;
+}
+
+.add-btn, .toggle-btn, .save-btn {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  width: auto;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.add-btn:hover, .toggle-btn:hover, .save-btn:hover {
+  opacity: 0.9;
+}

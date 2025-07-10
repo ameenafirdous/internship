@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Resume Builder</title>
+  <link rel="stylesheet" href="task3.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Modern Resume Builder</h1>
+
+    <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+    <button class="save-btn" onclick="saveToBrowser()">💾 Save to Browser</button>
+
+    <form id="resumeForm">
+      <h2>Personal Information</h2>
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="text" id="title" placeholder="Job Title" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="text" id="phone" placeholder="Phone Number" required />
+      <input type="text" id="address" placeholder="Address" required />
+      <input type="url" id="website" placeholder="Your Website URL" required />
+
+      <h2>Summary</h2>
+      <textarea id="summary" rows="3" placeholder="Write a short summary..." required></textarea>
+
+      <h2>Projects</h2>
+      <div id="projectContainer">
+        <div class="group">
+          <input type="text" placeholder="Project Title" required>
+          <textarea rows="2" placeholder="Project Description" required></textarea>
+        </div>
+      </div>
+      <button class="add-btn" onclick="addSection(event, 'projectContainer', 'project')">+ Add Project</button>
+
+      <h2>Skills</h2>
+      <div id="skillsContainer">
+        <input type="text" placeholder="e.g., HTML, CSS, JavaScript" required>
+      </div>
+      <button class="add-btn" onclick="addInput(event, 'skillsContainer', 'Skill')">+ Add Skill</button>
+
+      <h2>Education</h2>
+      <div id="educationContainer">
+        <div class="inline">
+          <input type="text" placeholder="Degree" required>
+          <input type="text" placeholder="University" required>
+          <input type="text" placeholder="Years" required>
+        </div>
+      </div>
+      <button class="add-btn" onclick="addEducation(event)">+ Add Education</button>
+
+      <h2>Experience (Optional)</h2>
+      <div id="experienceContainer">
+        <div class="group">
+          <input type="text" placeholder="Job Title">
+          <textarea rows="2" placeholder="Company & Duration"></textarea>
+        </div>
+      </div>
+      <button class="add-btn" onclick="addSection(event, 'experienceContainer', 'experience')">+ Add Experience</button>
+
+      <h2>Languages</h2>
+      <input type="text" id="languages" placeholder="e.g., Tamil, English" required />
+
+      <h3>Certifications</h3>
+      <div id="certificationContainer">
+        <input type="text" placeholder="Certification Title" required>
+      </div>
+      <button class="add-btn" onclick="addInput(event, 'certificationContainer', 'Certification Title')">+ Add Certification</button>
+
+      <h3>Awards / Activities</h3>
+      <div id="awardContainer">
+        <input type="text" placeholder="Award or Activity" required>
+      </div>
+      <button class="add-btn" onclick="addInput(event, 'awardContainer', 'Award or Activity')">+ Add Award</button>
+
+      <button type="button" onclick="generatePreview()">Preview Resume</button>
+      <button type="button" onclick="downloadResume()">Download Resume</button>
+    </form>
+
+    <div id="previewContainer" style="margin-top:40px; display:none;">
+      <h2>Resume Preview</h2>
+      <div id="resumePreview" class="container" style="background:#fff; padding:20px; border:1px solid #000;"></div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="task3.js"></script>
+</body>
+</html>
