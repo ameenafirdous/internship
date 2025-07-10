@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  transition: 0.3s;
+}
+
+:root {
+  --bg: #f0f2f5;
+  --text: #333;
+  --card: #fff;
+  --input: #eee;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #eee;
+  --card: #1e1e1e;
+  --input: #333;
+}
+
+.container {
+  width: 100%;
+  max-width: 550px;
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: var(--input);
+  border-radius: 6px;
+  color: var(--text);
+}
+
+.input-section button {
+  padding: 10px 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.filter button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 8px;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+ul#taskList {
+  list-style: none;
+  min-height: 100px;
+}
+
+li.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--input);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  cursor: grab;
+}
+
+li.task.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+li.task .actions button {
+  margin-left: 5px;
+  padding: 5px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+li.task .actions .edit {
+  background: #ffc107;
+  color: white;
+}
+
+li.task .actions .delete {
+  background: #dc3545;
+  color: white;
+}
+
+li.task .actions .complete {
+  background: #28a745;
+  color: white;
+}
+
+.dark-toggle {
+  background: transparent;
+  border: 1px solid var(--text);
+  color: var(--text);
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  float: right;
+}
+
+@media (max-width: 480px) {
+  .filter {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
